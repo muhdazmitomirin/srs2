@@ -14,8 +14,11 @@ from django.db.models import Count, Sum, Q, Case, Value, When, IntegerField
 def home(request):
 	return render(request,'base.html')
 
+def home_sbadmin(request):
+    return render(request, 'student/index.html') 
+
 def home_json(request):
-    return render(request, 'student/home_json.html')
+    return render(request, 'student/home_json.html')   
     
 # Student JSON list filtering
 class student_list_json(BaseDatatableView):
